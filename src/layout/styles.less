@@ -1,0 +1,26 @@
+@import '../mixins.less';
+
+.spinner-container {
+  height: 100%;
+}
+
+.layout-content {
+  overflow: initial;
+  min-height: auto;
+
+  .spinner-wrapper {
+    .display-center();
+    height: 100%;
+
+    .spin-icon {
+      font-size: 60px;
+    }
+  }
+}
+
+.layout-header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+}
