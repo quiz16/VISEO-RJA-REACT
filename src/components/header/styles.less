@@ -1,0 +1,50 @@
+@import '../../mixins.less';
+
+.header-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  .header-left {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .header-center {
+    max-height: 62px;
+    color: #FFFFFF;
+    text-align: center;
+    .span-style {
+      position: relative;
+      display: block;
+      max-height: 32px;
+    }
+
+    .header-title {
+      .span-style();
+      font-weight: 600;
+      margin-top: -43px;
+    }
+
+    .header-selection {
+      .span-style();
+      color: #D9E2EF;
+      margin-top: -15px;
+      font-size: 12px;
+
+      .down-icon-wrapper {
+        margin-left: 5px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .header-right {
+    font-size: 20px;
+    text-align: right;
+
+    .broadcast-icon {
+      margin-right: 20px;
+    }
+  }
+}

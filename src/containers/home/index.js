@@ -1,6 +1,5 @@
 import React from 'react'
 
-import TestImage from 'assets/aws-codepipeline.png'
 import './styles.less'
 
 const HomeComponent = props => {
