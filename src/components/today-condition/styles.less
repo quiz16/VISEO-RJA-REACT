@@ -1,0 +1,34 @@
+@import '../../mixins.less';
+
+.today-wrapper {
+  .display-center();
+  color: #FFFFFF;
+  height: 160px;
+
+  .cloud-wrapper {
+    font-size: 30px;
+  }
+
+  .today-details {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+    .weather-name {
+      font-size: 20px;
+    }
+
+    div {
+      color: @off-white;
+
+      .temperature {
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+
+      .percentage {
+        margin-left: 10px;
+      }
+    }
+  }
+}

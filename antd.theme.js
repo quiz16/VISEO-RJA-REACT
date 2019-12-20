@@ -18,4 +18,5 @@ module.exports = {
   'menu-dark-color': colors.menuText,
   'menu-text-color': colors.menuText,
   'menu-dark-selected-item-text-color': colors.menuText,
+  'off-white': '#D9E2EF',
 }
