@@ -1,0 +1,54 @@
+@import '../../mixins.less';
+
+.outlook-wrapper {
+  background-color: #FEFEFE;
+
+  .title {
+    .display-center();
+    font-size: 20px;
+    color: #63BADF;
+  }
+
+  .line {
+    border: 0.8px solid #ECECED;
+    width: 100%;
+  }
+
+  .item-wrapper {
+    display: flex;
+    padding: 10px 30px;
+
+    .day {
+      .display-center();
+      flex-direction: column;
+
+      .label {
+        font-weight: 600;
+      }
+
+      .icon {
+        color: #63BADF;
+        font-size: 24px;
+      }
+    }
+
+    .details {
+      margin-left: 20px;
+      .label {
+      }
+
+      .measures {
+        margin-left: 2px;
+        display: flex;
+
+        .label {
+          margin-left: 5px;
+        }
+
+        .temperature-wrapper {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

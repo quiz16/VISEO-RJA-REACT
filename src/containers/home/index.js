@@ -4,6 +4,7 @@ import TodayCondition from 'components/today-condition'
 import Gauge from 'components/gauge'
 import Chart from 'components/chart'
 import Forecast from 'components/forecast'
+import Outlook from 'components/outlook'
 
 import './styles.less'
 
@@ -14,6 +15,7 @@ const HomeComponent = props => {
       <Gauge />
       <Chart />
       <Forecast />
+      <Outlook />
     </div>
   )
 }
