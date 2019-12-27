@@ -14,11 +14,18 @@ const Chart = props => {
     ctx.translate(delta, 0)
     ctx.clearRect(-translated, 0, 600, 400)
     ctx.beginPath()
-    ctx.arc(200, 300, 5, 0, 2 * Math.PI)
+    const height = 80
+    let y = translated * -1 + height
+    if (Math.round(y) <= height) {
+      y = translated * 0.1 + height
+    } else {
+      y = translated * -0.1 + height
+    }
+    ctx.arc(translated * -1 + canvas.width / 2, y, 5, 0, 2 * Math.PI)
     ctx.fill()
-    ctx.moveTo(0, 0)
+    ctx.moveTo(0, canvas.height)
     for (let i = 0; i < canvas.width * 4; i++) {
-      ctx.lineTo(i, canvas.height + Math.sin(i * 0.01) * 100)
+      ctx.lineTo(i, canvas.height - Math.sin(i * 0.008) * 120)
     }
     ctx.stroke()
   }
@@ -28,15 +35,12 @@ const Chart = props => {
     canvas.width = document.getElementsByClassName('chart-wrapper')[0].offsetWidth
     canvas.height = 200
     const ctx = canvas.getContext('2d')
-    ctx.scale(1, -1)
-    ctx.translate(0, -400)
     ctx.beginPath()
-    ctx.arc(200, 300, 5, 0, 2 * Math.PI)
+    ctx.arc(canvas.width / 2, 80, 5, 0, 2 * Math.PI)
     ctx.fill()
     ctx.moveTo(0, 0)
-    //ctx.clearRect(-translated, 0, 600, 400)
     for (let i = 0; i < canvas.width; i++) {
-      ctx.lineTo(i, canvas.height + Math.sin(i * 0.008) * 100)
+      ctx.lineTo(i, canvas.height - Math.sin(i * 0.008) * 120)
     }
     ctx.setLineDash([5, 5])
     ctx.strokeStyle = '#FAA047'

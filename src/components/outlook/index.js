@@ -79,10 +79,10 @@ const Outlook = props => {
   const item = data.map((item, index) => {
     if (index !== data.length) {
       return (
-        <>
+        <div key={index}>
           <Item data={item}/>
           <hr className="line" />
-        </>
+        </div>
       )
     }
     return <Item data={item}/>
